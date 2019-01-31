@@ -40,11 +40,26 @@ public class Numberer {
 		}
 	}
 
+	/**
+	 * Makes a {@link String} with the integer <code>i</code> formatted to have at least <code>j</code> characters, 
+	 * for example: <code>getNumber(452, 7)</code> will return the {@link String} <code>"0000452"</code>
+	 * @param i Integer to format
+	 * @param j Minimum number of characters to be in the returned {@link String}
+	 * @return A {@link String} representation of the integer <code>i</code>, formatted as stated above
+	 */
 	private static String getNumber(int i, int j) {
 		String zs = xOf("0", j - ("" + i).length());
 		return zs + i;
 	}
 
+	/**
+	 * Makes a {@link String} containing <code>i</code> of <code>string</code>.
+	 * 
+	 * <p>Note that if <code>i</code> is less than or equal to 0, an empty {@link String} will be returned,
+	 * @param string
+	 * @param i
+	 * @return A {@link String} formatted as stated above
+	 */
 	private static String xOf(String string, int i) {
 		String s = "";
 		for(int j = 0; j < i; j++) {
